@@ -38,10 +38,11 @@ These results represent the specific hardware, software, virtual machine configu
 4. [Experimental Procedure](#4-experimental-procedure)
 5. [Benchmark Results](#5-benchmark-results)
 6. [Performance Analysis](#6-performance-analysis)
-7. [Screenshots](#7-screenshots)
-8. [Conclusion](#8-conclusion)
-9. [Repository Structure](#9-repository-structure)
-10. [Reproduction](#10-reproduction)
+7. [Performance Graphs](#7-performance-graphs)
+8. [Screenshots](#8-screenshots)
+9. [Conclusion](#9-conclusion)
+10. [Repository Structure](#10-repository-structure)
+11. [Reproduction](#11-reproduction)
 
 ---
 
@@ -311,11 +312,39 @@ Therefore, these results should not be treated as a universal performance rankin
 
 ---
 
-## 7. Screenshots
+## 7. Performance Graphs
+
+The benchmark results are visualized using three comparison graphs.
+
+### 7.1 Events per Second Comparison
+
+This graph compares the Sysbench CPU throughput of the two virtualization environments.
+
+![Events per Second Comparison](graphs/events_per_second_comparison.png)
+
+---
+
+### 7.2 Average Latency Comparison
+
+This graph compares the measured average latency during the CPU benchmark.
+
+![Average Latency Comparison](graphs/average_latency_comparison.png)
+
+---
+
+### 7.3 Total Events Comparison
+
+This graph compares the total number of benchmark events completed during the test.
+
+![Total Events Comparison](graphs/total_events_comparison.png)
+
+---
+
+## 8. Screenshots
 
 All experimental evidence is organized inside the `screenshots` directory.
 
-### 7.1 Type-1 — Proxmox VE
+### 8.1 Type-1 — Proxmox VE
 
 The Proxmox VE evidence includes:
 
@@ -347,7 +376,7 @@ Files:
 
 ---
 
-### 7.2 Type-2 — VMware Workstation
+### 8.2 Type-2 — VMware Workstation
 
 The VMware Workstation evidence includes:
 
@@ -373,9 +402,9 @@ Files:
 
 ---
 
-### 7.3 Performance Comparison
+### 8.3 Performance Comparison
 
-The final comparison screenshot is stored in:
+The original final comparison screenshot is stored in:
 
 ```text
 screenshots/comparison/
@@ -389,7 +418,7 @@ File:
 
 ---
 
-## 8. Conclusion
+## 9. Conclusion
 
 This experiment provided a practical comparison of Type-1 and Type-2 virtualization using a common CPU benchmarking workload.
 
@@ -411,12 +440,17 @@ The experiment demonstrates that virtualization architecture and configuration c
 
 ---
 
-## 9. Repository Structure
+## 10. Repository Structure
 
 ```text
-Experiment-01-Hypervisor-Analysis/
+Hypervisor-Analysis/
 │
 ├── README.md
+│
+├── graphs/
+│   ├── events_per_second_comparison.png
+│   ├── average_latency_comparison.png
+│   └── total_events_comparison.png
 │
 ├── screenshots/
 │   │
@@ -444,7 +478,7 @@ Experiment-01-Hypervisor-Analysis/
 
 ---
 
-## 10. Reproduction
+## 11. Reproduction
 
 To reproduce the CPU benchmark, install Sysbench inside each Ubuntu virtual machine:
 
@@ -478,7 +512,9 @@ The same benchmark command should be used in both virtualization environments fo
 
 ## Important Experimental Note
 
-An additional test using a lower prime limit (`--cpu-max-prime=2000`) was performed during the setup process. Those results are **not included** in the final analysis because the laboratory benchmark specification uses:
+An additional test using a lower prime limit (`--cpu-max-prime=2000`) was performed during the setup process.
+
+Those results are **not included** in the final analysis because the laboratory benchmark specification uses:
 
 ```bash
 sysbench cpu --cpu-max-prime=20000 run
