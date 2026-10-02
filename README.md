@@ -346,77 +346,48 @@ All experimental evidence is organized inside the `screenshots` directory.
 
 ### 8.1 Type-1 — Proxmox VE
 
-The Proxmox VE evidence includes:
+#### Proxmox Dashboard
+![Proxmox Dashboard](./screenshots/type1-proxmox/01-proxmox-dashboard.png)
 
-1. Proxmox dashboard
-2. VM configuration
-3. VM running state
-4. Ubuntu console
-5. System configuration
-6. Sysbench result
-7. Resource monitoring
+#### VM Configuration
+![Proxmox VM Configuration](./screenshots/type1-proxmox/02-proxmox-vm-configuration.png)
 
-Location:
+#### VM Running State
+![Proxmox VM Running](./screenshots/type1-proxmox/03-proxmox-vm-running.png)
 
-```text
-screenshots/type1-proxmox/
-```
+#### Ubuntu Console
+![Proxmox Ubuntu Console](./screenshots/type1-proxmox/04-proxmox-ubuntu-console.png)
 
-Files:
+#### System Configuration
+![Proxmox System Configuration](./screenshots/type1-proxmox/05-proxmox-system-configuration.png)
 
-```text
-01-proxmox-dashboard.png
-02-proxmox-vm-configuration.png
-03-proxmox-vm-running.png
-04-proxmox-ubuntu-console.png
-05-proxmox-system-configuration.png
-06-proxmox-sysbench-result.png
-07-proxmox-resource-monitoring.png
-```
+#### Sysbench Result
+![Proxmox Sysbench Result](./screenshots/type1-proxmox/06-proxmox-sysbench-result.png)
+
+#### Resource Monitoring
+![Proxmox Resource Monitoring](./screenshots/type1-proxmox/07-proxmox-resource-monitoring.png)
 
 ---
 
 ### 8.2 Type-2 — VMware Workstation
 
-The VMware Workstation evidence includes:
+#### VM Configuration
+![VMware VM Configuration](./screenshots/type2-vmware/01-vmware-vm-configuration.png)
 
-1. VM configuration
-2. VM running state
-3. System configuration
-4. Sysbench result
+#### VM Running State
+![VMware VM Running](./screenshots/type2-vmware/02-vmware-vm-running.png)
 
-Location:
+#### System Configuration
+![VMware System Configuration](./screenshots/type2-vmware/03-vmware-system-configuration.png)
 
-```text
-screenshots/type2-vmware/
-```
-
-Files:
-
-```text
-01-vmware-vm-configuration.png
-02-vmware-vm-running.png
-03-vmware-system-configuration.png
-04-vmware-sysbench-result.png
-```
+#### Sysbench Result
+![VMware Sysbench Result](./screenshots/type2-vmware/04-vmware-sysbench-result.png)
 
 ---
 
 ### 8.3 Performance Comparison
 
-The original final comparison screenshot is stored in:
-
-```text
-screenshots/comparison/
-```
-
-File:
-
-```text
-01-hypervisor-performance-comparison.png
-```
-
----
+![Hypervisor Performance Comparison](./screenshots/comparison/01-hypervisor-performance-comparison.png)
 
 ## 9. Conclusion
 
